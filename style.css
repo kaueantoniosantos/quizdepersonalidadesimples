@@ -1,0 +1,139 @@
+/* --------------------
+   1. Estilos Base e Tipografia
+   -------------------- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Fundo claro e suave */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2, h4 {
+    color: #007bff; /* Azul primário para títulos */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --------------------
+   2. Container Principal
+   -------------------- */
+#quiz-container, #result-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px; /* Limita a largura para melhor leitura */
+    margin-top: 20px;
+}
+
+/* --------------------
+   3. Estilizando as Perguntas
+   -------------------- */
+.question-block {
+    margin-bottom: 30px;
+    border-left: 5px solid #007bff; /* Uma borda decorativa na lateral */
+    padding-left: 15px;
+}
+
+.question-block h4 {
+    text-align: left;
+    color: #333;
+    margin-top: 0;
+}
+
+/* --------------------
+   4. Transformando Alternativas em Botões (O mais importante!)
+   -------------------- */
+
+/* Esconde o radio button nativo */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estiliza o rótulo (label) como um botão */
+.option-label {
+    display: block;
+    background-color: #f0f0f0; /* Fundo do botão */
+    color: #555;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    border: 2px solid transparent; /* Adiciona uma borda transparente para não "saltar" ao selecionar */
+}
+
+/* Efeito Hover (passar o mouse) */
+.option-label:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo quando a opção é SELECIONADA (radio button checked) */
+input[type="radio"]:checked + .option-label {
+    background-color: #007bff; /* Fundo azul primário */
+    color: #ffffff; /* Texto branco */
+    border-color: #0056b3; /* Borda um pouco mais escura */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* --------------------
+   5. Botão de Envio (Submit)
+   -------------------- */
+#submit-button {
+    background-color: #28a745; /* Verde para ação final */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#submit-button:hover {
+    background-color: #218838;
+}
+
+#submit-button:active {
+    transform: scale(0.98);
+}
+
+/* --------------------
+   6. Estilos do Resultado Final
+   -------------------- */
+#result-container {
+    text-align: center;
+    border-left: 5px solid #28a745; /* Borda verde */
+}
+
+#result-container h2 {
+    color: #28a745;
+}
+
+#final-result strong {
+    display: block;
+    font-size: 1.8rem;
+    margin: 15px 0;
+    color: #007bff;
+}
+
+/* --------------------
+   7. Responsividade (para telas menores/celulares)
+   -------------------- */
+@media (max-width: 700px) {
+    #quiz-container, #result-container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .option-label {
+        font-size: 0.95rem;
+    }
+}
