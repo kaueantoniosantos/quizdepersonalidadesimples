@@ -53,7 +53,7 @@ A estrutura do projeto segue as boas práticas de separação de código:
 
 Teste o quiz ao vivo:
 
-https://kaueantoniosantos.github.io/quizpersonalizado/
+https://kaueantoniosantos.github.io/quizdepersonalidadesimples/
 
 ---
 
